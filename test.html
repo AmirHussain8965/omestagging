@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse Countdown</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style>
+    .countdown {
+        font-size: 14px;
+        margin-top: 100px;
+    }
+</style>
+
+<body>
+    <div class="countdown" id="countdown"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            var countdownElement = $('#countdown');
+            var count = 999;
+
+            function updateCountdown() {
+                countdownElement.text(count);
+                count--;
+
+                if (count < 191) {
+                    clearInterval(countdownInterval);
+                    countdownElement.text('191');
+                }
+            }
+
+            var countdownInterval = setInterval(updateCountdown, 0.001); // Update every 1 second
+        });
+
+    </script>
+</body>
+
+</html>

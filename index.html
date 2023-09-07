@@ -94,7 +94,7 @@
                         class="d-block w-100 main_hero_img" alt="...">
                     <div class="carousel-caption d-md-block" data-aos="fade-up">
                         <h1>Selling your Home?</h1>
-                        <p>gET a virtual staging plan For Just $199*</p>
+                        <p>gET a virtual staging plan For Just $<span class="countdown" id="countdown"></span></p>
                         <div class="slider_div">
                             <a href="#"><img src="assets/img/pby.png" alt=""></a>
                         </div>
@@ -105,7 +105,7 @@
                         class="d-block w-100 main_hero_img" alt="...">
                         <div class="carousel-caption d-md-block">
                             <h1>Selling your Home?</h1>
-                            <p>gET a virtual staging plan For Just $199*</p>
+                            <p>gET a virtual staging plan For Just $<span class="countdown" id="countdown"></span></p>
                             <div class="slider_div">
                                 <a href="#"><img src="assets/img/pby.png" alt=""></a>
                             </div>
@@ -116,7 +116,7 @@
                         class="d-block w-100 main_hero_img" alt="...">
                         <div class="carousel-caption d-md-block">
                             <h1>Selling your Home?</h1>
-                            <p>gET a virtual staging plan For Just $199*</p>
+                            <p>gET a virtual staging plan For Just $<span class="countdown" id="countdown"></span></p>
                             <div class="slider_div">
                                 <a href="#"><img src="assets/img/pby.png" alt=""></a>
                             </div>
@@ -127,7 +127,7 @@
                         class="d-block w-100 main_hero_img" alt="...">
                         <div class="carousel-caption d-md-block">
                             <h1>Selling your Home?</h1>
-                            <p>gET a virtual staging plan For Just $199*</p>
+                            <p>gET a virtual staging plan For Just $<span class="countdown" id="countdown"></span></p>
                             <div class="slider_div">
                                 <a href="#"><img src="assets/img/pby.png" alt=""></a>
                             </div>
@@ -154,7 +154,7 @@
             <h1 class="title">Take a look At Our Recent Projects</h1>
             <div class="row">
                 <div class="col-xl-6 col-lg-6 col-md-12 col-sm-12">
-                    <div class="home_sec2_card_body_div" data-aos="zoom-in-down">
+                    <div class="home_sec2_card_body_div">
                         <div class="home_sec2_card_imgs">
                             <img src="assets/img/c3.png" class="sec2_img1"
                                 alt="">
@@ -773,9 +773,28 @@
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
         crossorigin="anonymous"></script>
         <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="assets/js/script.js"></script>
     <script>
         AOS.init();
+      </script>
+      <script>
+         $(document).ready(function () {
+            var countdownElement = $('.countdown');
+            var count = 999;
+
+            function updateCountdown() {
+                countdownElement.text(count);
+                count--;
+
+                if (count < 191) {
+                    clearInterval(countdownInterval);
+                    countdownElement.text('191');
+                }
+            }
+
+            var countdownInterval = setInterval(updateCountdown, 0.001); // Update every 1 second
+        });
       </script>
 </body>
 
