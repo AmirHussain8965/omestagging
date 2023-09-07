@@ -1,0 +1,4 @@
+data-aos="zoom-in"
+data-aos="zoom-in-up"
+data-aos="zoom-in-down"
+  data-aos="fade-up"
