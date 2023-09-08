@@ -781,7 +781,7 @@
       <script>
          $(document).ready(function () {
             var countdownElement = $('.countdown');
-            var count = 999;
+            var count = 499;
 
             function updateCountdown() {
                 countdownElement.text(count);
@@ -789,11 +789,11 @@
 
                 if (count < 191) {
                     clearInterval(countdownInterval);
-                    countdownElement.text('191');
+                    countdownElement.text('199');
                 }
             }
 
-            var countdownInterval = setInterval(updateCountdown, 0.001); // Update every 1 second
+            var countdownInterval = setInterval(updateCountdown, 0.1); // Update every 1 second
         });
       </script>
 </body>
