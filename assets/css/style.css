@@ -1319,6 +1319,17 @@ body{
     margin-top: 20px;
 
 }
+.accordion_three .accordion-body{
+    box-shadow: none !important;
+    border-radius: 15px;
+    margin-top: 0px !important;
+}
+.accordion_three .accordion-header{
+    box-shadow: none !important;
+}
+.accordion_three {
+    box-shadow: 1px 2px 4px 0px #00000040;
+}
 .accordion-button:not(.collapsed){
     box-shadow: none !important;
 }
@@ -1517,6 +1528,9 @@ body{
     }
     .home_section_one{
         display: none;
+    }
+    .card_inner_text_main{
+        min-height: 200px;
     }
 }
 @media (max-width:450px){
